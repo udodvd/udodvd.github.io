@@ -91,7 +91,7 @@ header h2 {
 .page-wrapper {
     width: 700px;
 margin: 0 auto;
-    background: url(img/squid-blowfish.png) no-repeat right top;
+    background: url(img/critters.png) no-repeat right 50% , url(img/squid-blowfish.png) no-repeat right top; 
     z-index: 4;
     position: relative;
 }
