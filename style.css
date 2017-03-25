@@ -1,0 +1,191 @@
+h1,h3{
+    font-family: 'CountryWestern';
+       
+}
+h3 {
+    font-size: 21px;
+
+    padding-top: 42px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-size: 27px;
+}
+.preamble h3,.main h3{
+ background: url(img/about.png) no-repeat 50% 0%;  
+}
+a:visited {
+    color: #999900;
+    text-decoration: none;
+}
+a:link {
+    color: #993300;
+    text-decoration: none;
+}
+body{
+background:#f4edd7 url(img/water.png) top repeat-x fixed;
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+    font-size: 14px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    line-height: 18px;
+    font-family: -WEBKIT-PICTOGRAPH;
+    padding: 0 6px 15px;
+    box-sizing: border-box;
+}
+header h1{
+ background: url(img/title.png) no-repeat;
+    width: 210px;
+    height: 146px;
+    margin-top: 0px;
+    position: fixed;
+    padding: 48px 0 0 79px;
+    font-size: 25px;
+    transform: rotate(0deg);
+    top: 0px;
+    z-index: 5;
+
+
+}
+header h1 span:first-line{
+transform: scaleY(1.5) scalex(1.6) rotate(-13deg);
+  color:#6f6b60;  
+}
+.summary p ,.preamble h3, .preamble p ,.explanation h3 , .explanation p, .participation h3 , .participation p , .benefits h3, .benefits p ,.requirements h3 , .requirements p{
+    width: 283px;
+    margin: 0 auto;
+    text-align: center;
+}
+.summary p:first-of-type{
+    padding-top: 50px;
+    font-style: oblique;
+    font-size: 13px; 
+}
+.summary p:nth-of-type(2) {
+    padding: 15px 0;
+    font-variant: small-caps;
+    font-size: 14px;
+}
+header h1>span {
+    display: inline-block;
+    text-align: center;
+    transform: scaleY(1.5) rotate(-9deg);
+    letter-spacing: -2px;
+    position: relative;
+    top: 3px;
+    left: 11px;
+    line-height: 21px;
+}
+header h2 {
+    font-family: 'BenvolioFont4You';
+    position: relative;
+    transform: rotate(269deg);
+    display: inline-block;
+    left: -60px;
+    top: 203px;
+    font-size: 25px;
+    z-index: 3;
+}
+.page-wrapper {
+    width: 700px;
+margin: 0 auto;
+    background: url(img/squid-blowfish.png) no-repeat right top;
+    z-index: 4;
+    position: relative;
+}
+.summary {
+    background: url(img/top.png) no-repeat;
+    width: 385px;
+    padding-bottom: 20px;
+}
+.preamble , .explanation ,.participation ,.benefits ,.requirements{
+       width: 385px;
+    background: url(img/back.png) repeat-y bottom;
+}
+.main.supporting{
+      float: left;  
+}
+.intro {
+    margin-top: 0px;
+    padding-top: 130px;
+}
+.page-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+aside.sidebar {
+    float: left;
+    width: 235px;
+    overflow: visible;
+    font: italic 14px Georgia;
+    background: url(img/menu-top.png) no-repeat top;
+    position: relative;
+    top: -265px;
+    left: -16px;
+    z-index: -1;
+}
+a.design-name {
+    display: block;
+    font: bold 12px Helvetica;
+}
+div#design-selection {
+    padding: 0 0 15px;
+    margin-top: 104px;
+    background:url(img/menu-back.png) repeat-y 41% 46%;
+}
+div#design-archives , div#zen-resources {
+    padding:0 0 0 15px;
+    background:url(img/menu-back.png) repeat-y 41% 46%;
+}
+
+.sidebar ul li {
+    background: url(img/bullet.png) no-repeat 0% 46%;
+    padding-left: 34px;
+    line-height: 23px;
+}
+.wrapper {
+    background: url(img/menu-end.png)no-repeat 55% 100%;
+    height: 890px;
+}
+ol, ul {
+    list-style: none;
+    margin-left: 14px;
+}
+.wrapper h3 {
+    font-size: 21px;
+    padding: 0px 0 0 15px;
+}
+.extra2 {
+    background: url(img/bottom.png) no-repeat center;
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 5;
+}
+.supporting {
+    margin-top: 0px;
+    width: 385px;
+    background: url(img/end.png) no-repeat -1px 100%;
+    padding-bottom: 600px;
+    margin-bottom: 50px;
+}
+footer {
+    position: absolute;
+    bottom: 700px;
+    margin-left: 350px;
+    z-index: 6;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    background: url(img/footer.png) no-repeat;
+    height: 57px;
+    width: 252px;
+    text-align: center;
+    padding: 15px 40px 0 0;
+    padding-right: 40px;
+    visibility: visible;
+}
