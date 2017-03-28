@@ -140,6 +140,35 @@ i#faMyStyle2 {
     font-weight: 700;
     color: #5c5c5c;
 }
+@media all and (max-width:1024px){
+i#faMyStyle2 {
+    font-size: 95px;
+    line-height: 674px;
+    height: 674px;
+    width: 100%;
+}
+    
+.fotoWrap img {
+    float: left;
+    width: 100%;
+}
+    i#faMyStyle {
+    float: right;
+}
+    .ActionWrap p {
+    max-width: 523px;
+    padding-left: 30px;
+}
+}
+
+@media all and (max-width:755px){
+.ActionWrap p {
+max-width: 428px;
+padding-left: 0px;
+font-size: 22px!important;
+}
+
+}
 @media screen and (max-width: 640px){
     .ActionSlide {
         background: #373c3f;
@@ -229,6 +258,49 @@ i#faMyStyle2 {
         background: azure;
     }
 }
+@media all and (max-width:667px) and (orientation:landscape){
+    .ActionWrap p {
+    max-width: 495px;
+    line-height: 230px;
+    font-size: 26px;
+
+}
+    .ActionSlide {
+    height: 230px;
+}
+    i#faMyStyle {
+    width: 172px;
+    height: 230px;
+    line-height: 230px;
+
+}
+    i#faMyStyle2, .fotoWrap img {
+    width: 100%;
+}
+.col-2 {
+    width: 100%;
+    margin-bottom: 0px;
+}
+    .textRow div:nth-of-type(2) {
+    padding: 78px 30px 0px 58px;
+}
+}
+@media all and (max-width:568px) and (orientation:landscape){
+.ActionWrap p {
+    max-width: 399px;
+    line-height: 200px;
+    font-size: 20px;
+}
+.ActionSlide {
+    height: 200px;
+}
+    i#faMyStyle {
+    width: 169px;
+    height: 200px;
+    line-height: 200px;
+}
+}
+
 @media screen and (max-width:375px){
     i#faMyStyle2 {
         font-size: 43px;
@@ -317,74 +389,4 @@ i#faMyStyle2 {
         padding-left: 22px;
         font-size: 18px;
     }
-}
-@media all and (max-width:667px) and (orientation:landscape){
-    .ActionWrap p {
-    max-width: 495px;
-    line-height: 230px;
-    font-size: 26px;
-
-}
-    .ActionSlide {
-    height: 230px;
-}
-    i#faMyStyle {
-    width: 172px;
-    height: 230px;
-    line-height: 230px;
-
-}
-    i#faMyStyle2, .fotoWrap img {
-    width: 100%;
-}
-.col-2 {
-    width: 100%;
-    margin-bottom: 0px;
-}
-    .textRow div:nth-of-type(2) {
-    padding: 78px 30px 0px 58px;
-}
-}
-@media all and (max-width:568px) and (orientation:landscape){
-.ActionWrap p {
-    max-width: 399px;
-    line-height: 200px;
-    font-size: 20px;
-}
-.ActionSlide {
-    height: 200px;
-}
-    i#faMyStyle {
-    width: 169px;
-    height: 200px;
-    line-height: 200px;
-}
-}
-@media all and (max-width:1024px){
-i#faMyStyle2 {
-    font-size: 95px;
-    line-height: 674px;
-    height: 674px;
-    width: 100%;
-}
-    
-.fotoWrap img {
-    float: left;
-    width: 100%;
-}
-    i#faMyStyle {
-    float: right;
-}
-    .ActionWrap p {
-    max-width: 523px;
-    padding-left: 30px;
-}
-}
-@media all and (max-width:755px){
-.ActionWrap p {
-max-width: 428px;
-padding-left: 0px;
-font-size: 22px!important;
-}
-
 }
