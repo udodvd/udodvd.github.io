@@ -346,6 +346,32 @@ font-size: 22px;
         font-size: 18px;
     }
 }
+@media (max-width: 412px){
+    .Slider h1 {
+    font-size: 31px;
+    padding: 81px 0 44px 49px;
+}
+    .ActionWrap p {
+    max-width: 272px;
+    line-height: 150px;
+    font-size: 16px;
+    padding: 0px 0px;
+    word-break: break-all;
+}
+    i#faMyStyle {
+    width: 129px;
+}
+}
+
+
+@media (max-width: 360px){
+    .ActionWrap p {
+    max-width: 279px;
+    font-size: 15px;
+}
+}
+
+
 @media all and (max-width:320px){
     .Slider p {
     padding: 0px 0 0 38px;
