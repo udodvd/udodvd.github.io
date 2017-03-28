@@ -363,7 +363,7 @@ font-size: 22px!important;
     }
 .ActionWrap p {
     max-width: 239px;
-    font-size: 13px;
+    font-size: 13px!important;
     }
     .ActionSlide {
         background: #373c3f;
