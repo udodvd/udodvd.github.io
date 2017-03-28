@@ -320,7 +320,7 @@ i#faMyStyle2 {
 }
 @media all and (max-width:667px) and (orientation:landscape){
     .ActionWrap p {
-    width: 495px;
+    max-width: 495px;
     line-height: 230px;
     font-size: 26px;
 
@@ -333,5 +333,20 @@ i#faMyStyle2 {
     height: 230px;
     line-height: 230px;
 
+}
+}
+@media all and (max-width:568px) and (orientation:landscape){
+.ActionWrap p {
+    max-width: 399px;
+    line-height: 200px;
+    font-size: 20px;
+}
+.ActionSlide {
+    height: 200px;
+}
+    i#faMyStyle {
+    width: 169px;
+    height: 200px;
+    line-height: 200px;
 }
 }
