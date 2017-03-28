@@ -289,11 +289,9 @@ i#faMyStyle2 {
         line-height: 75px;
         font-size: 27px;
     }
-    .ActionWrap p {
-        max-width: 250px;
-        line-height: 75px;
-        font-size: 17px;
-        padding: 0 0px;
+.ActionWrap p {
+    max-width: 239px;
+    font-size: 13px;
     }
     .ActionSlide {
         background: #373c3f;
@@ -332,7 +330,6 @@ i#faMyStyle2 {
 }
     i#faMyStyle {
     width: 172px;
-        
     height: 230px;
     line-height: 230px;
 
