@@ -365,6 +365,11 @@ i#faMyStyle2 {
     font-size: 95px;
     line-height: 674px;
     height: 674px;
-
+    width: 100%;
+}
+    
+.fotoWrap img {
+    float: left;
+    width: 100%;
 }
 }
