@@ -380,3 +380,11 @@ i#faMyStyle2 {
     padding-left: 30px;
 }
 }
+@media all and (max-width:755px){
+.ActionWrap p {
+max-width: 428px;
+padding-left: 0px;
+font-size: 22px!important;
+}
+
+}
