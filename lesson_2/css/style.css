@@ -169,6 +169,34 @@ font-size: 22px;
 }
 
 }
+
+@media all and (max-width:667px) and (orientation:landscape){
+    .ActionWrap p {
+    max-width: 495px;
+    line-height: 230px;
+    font-size: 26px;
+
+}
+    .ActionSlide {
+    height: 230px;
+}
+    i#faMyStyle {
+    width: 172px;
+    height: 230px;
+    line-height: 230px;
+
+}
+    i#faMyStyle2, .fotoWrap img {
+    width: 100%;
+}
+.col-2 {
+    width: 100%;
+    margin-bottom: 0px;
+}
+    .textRow div:nth-of-type(2) {
+    padding: 78px 30px 0px 58px;
+}
+}
 @media all and (max-width: 640px){
     .ActionSlide {
         background: #373c3f;
@@ -257,33 +285,6 @@ font-size: 22px;
         margin-bottom: 0px;
         background: azure;
     }
-}
-@media all and (max-width:667px) and (orientation:landscape){
-    .ActionWrap p {
-    max-width: 495px;
-    line-height: 230px;
-    font-size: 26px;
-
-}
-    .ActionSlide {
-    height: 230px;
-}
-    i#faMyStyle {
-    width: 172px;
-    height: 230px;
-    line-height: 230px;
-
-}
-    i#faMyStyle2, .fotoWrap img {
-    width: 100%;
-}
-.col-2 {
-    width: 100%;
-    margin-bottom: 0px;
-}
-    .textRow div:nth-of-type(2) {
-    padding: 78px 30px 0px 58px;
-}
 }
 @media all and (max-width:568px) and (orientation:landscape){
 .ActionWrap p {
