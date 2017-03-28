@@ -372,4 +372,11 @@ i#faMyStyle2 {
     float: left;
     width: 100%;
 }
+    i#faMyStyle {
+    float: right;
+}
+    .ActionWrap p {
+    max-width: 523px;
+    padding-left: 30px;
+}
 }
