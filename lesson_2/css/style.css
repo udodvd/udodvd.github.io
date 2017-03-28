@@ -332,9 +332,9 @@ i#faMyStyle {
 @media all and (max-width:375px){
     i#faMyStyle2 {
         font-size: 43px;
-        line-height: 275px;
-        height: 275px;
-    }
+    line-height: 345px;
+    height: 345px;
+}
     i#faMyStyle {
         width: 81px;
         height: 75px;
