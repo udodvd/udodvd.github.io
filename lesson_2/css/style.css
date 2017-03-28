@@ -361,6 +361,10 @@ font-size: 22px;
     i#faMyStyle {
     width: 129px;
 }
+    i#faMyStyle2 {
+    line-height: 460px;
+    height: 460px;
+}
 }
 
 
