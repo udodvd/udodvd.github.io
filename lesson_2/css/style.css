@@ -1,0 +1,317 @@
+a:link ,a:hover{
+    cursor: pointer;
+}
+a:hover{
+    color: antiquewhite!important;
+    transition: 0.5s ease!important;
+}
+body{
+    font-family: 'Asap', sans-serif;
+}
+nav{
+    background: #373c3f;
+    height: 100px;
+}
+nav ul li , #myClickMenu {
+    float: left;
+    padding-left: 53px;
+}
+nav a, #myClickMenu {
+    color: white;
+    text-decoration: none;
+    line-height: 100px;
+}
+.wrapMenu {
+    background: #373c3f;
+}
+nav ,.Slider ,.ActionWrap,.fotoWrap,.textRow {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+nav {
+    background: #373c3f;
+    height: 100px;
+    position: relative;
+}
+.Slider {
+    height: 580px;
+}
+.Slider h1 {
+    font: bold 54px Asap;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    padding: 150px 0 50px 75px;
+}
+.Slider p {
+    color: #a6d2dc;
+    padding: 0 0 0 75px;
+    font-size: 26px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.43);
+}
+.wrapContent{
+    background: #17b2c5; /* Old browsers */
+    background: -moz-linear-gradient(left, #17b2c5 1%, #0995ad 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #17b2c5 1%,#0995ad 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #17b2c5 1%,#0995ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17b2c5', endColorstr='#0995ad',GradientType=1 ); /* IE6-9 */
+}
+nav ul li:hover , #myClickMenu:hover{
+    background: #373c3f;
+    transition: 1s ease;
+    cursor: pointer;
+}
+nav ul li:hover a {
+    color: antiquewhite!important;
+}
+a#myClickMenu ,.fa-bars {
+    display: none;
+}
+.ActionSlide {
+    background: #373c3f;
+    height: 245px;
+}
+.ActionWrap {
+    color: #897a97;
+}
+.ActionWrap p {
+    width: 795px;
+    display: inline-block;
+    line-height: 245px;
+    font-size: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+i#faMyStyle {
+    width: 229px;
+    display: inline-block!important;
+    text-align: center;
+    height: 245px;
+    line-height: 245px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: #bc3183;
+}
+i#faMyStyle2 {
+    display: inline-block;
+    width: 344px;
+    color: white;
+    background: #5b0fa1;
+    font-size: 35px;
+    line-height: 295px;
+    height: 295px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.fotoWrap img{
+    float: left;
+}
+.fotoWrap::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.fotoSlide{
+    background: #bdcfda;
+}
+.col-2 {
+    float: left;
+    width: 50%;
+    text-align: justify;
+    padding: 78px 30px 0px 58px;
+    box-sizing: border-box;
+    margin-bottom: 250px;
+}
+.textRow div:nth-of-type(2){
+    padding: 138px 78px 0px 30px;
+}
+.textRow h2 {
+    font-size: 29px;
+    padding-bottom: 35px;
+    font-weight: 600;
+    color: #088ca5;
+}
+.textRow p{
+    font-family:Oxygen;
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #5c5c5c;
+}
+@media screen and (max-width: 640px){
+    .ActionSlide {
+        background: #373c3f;
+        height: 150px;
+    }
+    .fotoWrap img {
+        width: 100%;
+    }
+    i#faMyStyle {
+        width: 140px;
+        height: 150px;
+        line-height: 150px;
+        font-size: 40px;
+    }
+    i#faMyStyle2 {
+        display: inline-block;
+        width: 100%;
+        background: #5b0fa1;
+        font-size: 55px;
+        line-height: 550px;
+        height: 550px;
+    }
+    .ActionWrap p {
+        max-width: 500px;
+        display: block;
+        line-height: 150px;
+        font-size: 28px;
+        box-sizing: border-box;
+        float: left;
+        padding: 0 21px;
+    }
+    .Slider {
+        height: 349px;
+    }
+    .Slider h1 {
+        font-size:45px;
+        padding: 90px 0 50px 75px;
+    }
+    nav {
+        height: 73px;
+    }
+    nav a, #myClickMenu {
+        line-height: 73px;
+    }
+    a#myClickMenu,.fa-bars {
+        display: inline-block;
+    }
+    a#myClickMenu {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 26px;
+    }
+   .nav{
+        display: none;
+    }
+    nav ul li a{
+        color: black;
+        line-height: 30px;
+        transition: 1s ease!important;
+    }
+    #myClickMenu{
+        float: none;
+    }
+    nav ul li{
+        float: none;
+        background: white;
+    }
+    i.fa.fa-bars {
+        float: right;
+        line-height: 73px;
+        padding-right: 35px;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 33px;
+        background: black;
+    }
+    .textRow div:nth-of-type(2) {
+        padding: 10px 60px 0px 60px;
+    }
+    .col-2 {
+        float: none;
+        width: 100%;
+        text-align: justify;
+        padding: 78px 60px 0px 60px;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+        background: azure;
+    }
+}
+@media screen and (max-width:375px){
+    i#faMyStyle2 {
+        font-size: 43px;
+        line-height: 275px;
+        height: 275px;
+    }
+    i#faMyStyle {
+        width: 81px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 27px;
+    }
+    .ActionSlide {
+        background: #373c3f;
+        height: 75px;
+    }
+    .ActionWrap p {
+        max-width: 294px;
+        line-height: 75px;
+        font-size: 17px;
+        padding: 0 0px;
+    }
+    .Slider h1 {
+        font-size: 28px;
+        padding: 85px 0 50px 45px;
+        font-weight: 400;
+    }
+    nav {
+        height: 48px;
+    }
+    nav a, #myClickMenu {
+        line-height: 48px;
+    }
+    a#myClickMenu {
+        font-size: 20px;
+    }
+    i.fa.fa-bars {
+        line-height: 48px;
+        padding-right: 22px;
+        padding-left: 22px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:320px){
+    i#faMyStyle2 {
+        font-size: 43px;
+        line-height: 275px;
+        height: 275px;
+    }
+    i#faMyStyle {
+        width: 81px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 27px;
+    }
+    .ActionWrap p {
+        max-width: 294px;
+        line-height: 75px;
+        font-size: 17px;
+        padding: 0 0px;
+    }
+    .ActionSlide {
+        background: #373c3f;
+        height: 75px;
+    }
+    nav {
+        height: 48px;
+    }
+    .Slider h1 {
+        font-size: 26px;
+        padding: 90px 0 49px 34px;
+        font-weight: 300;
+    }
+    nav a, #myClickMenu {
+        line-height: 48px;
+    }
+    a#myClickMenu {
+        font-size: 20px;
+    }
+    i.fa.fa-bars {
+        line-height: 48px;
+        padding-right: 22px;
+        padding-left: 22px;
+        font-size: 18px;
+    }
+}
