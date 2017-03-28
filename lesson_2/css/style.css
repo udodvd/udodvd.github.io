@@ -169,7 +169,7 @@ font-size: 22px!important;
 }
 
 }
-@media screen and (max-width: 640px){
+@media all and (max-width: 640px){
     .ActionSlide {
         background: #373c3f;
         height: 150px;
@@ -301,7 +301,7 @@ font-size: 22px!important;
 }
 }
 
-@media screen and (max-width:375px){
+@media all and (max-width:375px){
     i#faMyStyle2 {
         font-size: 43px;
         line-height: 275px;
@@ -344,7 +344,7 @@ font-size: 22px!important;
         font-size: 18px;
     }
 }
-@media screen and (max-width:320px){
+@media all and (max-width:320px){
     .Slider p {
     padding: 0px 0 0 38px;
     font-size: 19px;
