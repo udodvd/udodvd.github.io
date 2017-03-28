@@ -273,9 +273,7 @@ font-size: 22px;
         font-size: 33px;
         background: black;
     }
-    .textRow div:nth-of-type(2) {
-        padding: 10px 60px 0px 60px;
-    }
+   
     .col-2 {
         float: none;
         width: 100%;
@@ -284,6 +282,9 @@ font-size: 22px;
         box-sizing: border-box;
         margin-bottom: 0px;
         background: azure;
+    }
+     .textRow div:nth-of-type(2) {
+        padding: 10px 60px 0px 60px;
     }
 }
 @media all and (max-width:568px) and (orientation:landscape){
