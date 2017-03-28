@@ -353,7 +353,7 @@ font-size: 22px;
 }
     .ActionWrap p {
     max-width: 272px;
-    line-height: 150px;
+line-height: 75px;
     font-size: 16px;
     padding: 0px 0px;
     word-break: break-all;
