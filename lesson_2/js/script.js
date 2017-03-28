@@ -4,7 +4,6 @@ $(document).ready(function(){
 
     $(touch).on('click', function(e) {
         e.preventDefault();
-        console.log(e.target)
         menu.slideToggle();
     });
     $(window).resize(function(){
