@@ -284,13 +284,13 @@ i#faMyStyle2 {
         height: 275px;
     }
     i#faMyStyle {
-        width: 81px;
+        width: 70px;
         height: 75px;
         line-height: 75px;
         font-size: 27px;
     }
     .ActionWrap p {
-        max-width: 294px;
+        max-width: 250px;
         line-height: 75px;
         font-size: 17px;
         padding: 0 0px;
@@ -319,4 +319,21 @@ i#faMyStyle2 {
         padding-left: 22px;
         font-size: 18px;
     }
+}
+@media all and (max-width:667px) and (orientation:landscape){
+    .ActionWrap p {
+    width: 495px;
+    line-height: 230px;
+    font-size: 26px;
+
+}
+    .ActionSlide {
+    height: 230px;
+}
+    i#faMyStyle {
+    width: 172px;
+    height: 230px;
+    line-height: 230px;
+
+}
 }
