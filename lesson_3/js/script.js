@@ -2,6 +2,7 @@ $(document).ready(function(){
     var touch = $('#myClickMenu');
     var menu = $('.nav');
     var touch2 = $('#faMyStyle');
+    //touch my body
     $(touch2).on('click', function(e) {
         e.preventDefault();
         menu.slideToggle();
