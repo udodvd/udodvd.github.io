@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var touch = $('#myClickMenu');
     var menu = $('.nav');
-    var touch2 = $('#faMyStyle');
+    var touch2 = $('.fa-bars');
     //touch my body
     $(touch2).on('click', function(e) {
         e.preventDefault();
