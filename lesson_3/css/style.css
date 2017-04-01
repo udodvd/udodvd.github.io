@@ -148,7 +148,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17b2c5', end
         flex: 2 1 223px;
     }
     .fa-bars {
-        flex: 1 1 0px;
+        flex: 0 1 0px;
     }
     .fotoWrap ,.textRow{
         display: flex;
