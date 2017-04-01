@@ -5,6 +5,9 @@ body{
 img{
     max-width: 100%!important;
 }
+i.fa.fa-bars {
+    cursor: pointer;
+}
 .textRowWrap h2 {
     color: #088ca5;
     font-size: 35px;
