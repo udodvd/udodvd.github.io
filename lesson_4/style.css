@@ -13,6 +13,7 @@
     position: relative;
     box-sizing: border-box;
     box-shadow: inset 0px 0px 33px 5px black, 0px 0px 49px 0px rgba(0, 0, 0, 0.68);
+    overflow: hidden;
 }
 .clock::before{
     content: "";
