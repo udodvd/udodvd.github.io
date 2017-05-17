@@ -1,0 +1,25 @@
+form#pUp {
+    width: 275px;
+    margin: 0 auto;
+    text-align: center;
+}
+input {
+    float: left;
+}
+select{
+    float:right;
+}
+.clear{
+    clear: both;
+    display: block;
+}
+.wraper {
+    text-align: -webkit-center;
+}
+.input-group {
+    position: relative;
+}
+html, body, .wraper{
+    width: 100%;
+    height: 100%;
+}
