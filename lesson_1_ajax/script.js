@@ -5,7 +5,9 @@ window.onload = function () {
 }
 function ajaxGet() {
     var XmlRh = new XMLHttpRequest();
-
+console.log('XmlRh',XmlRh);
     XmlRh.open('GET','ip.php');
+    console.log(' XmlRh.open',XmlRh);
     XmlRh.send();
+    console.log('XmlRh.send',XmlRh);
 }
