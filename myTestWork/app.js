@@ -1,7 +1,7 @@
 ﻿// Для работы данного примера используется модуль ngResource который предоставляет удобный интерфейс для взаимодействия c REST сервисами
 // посредством $resource
 angular.module("exampleApp", ["ngResource"])
-.constant("baseUrl", "http://localhost:2403/items/")
+.constant("baseUrl", "https://udodvd.github.io/myTestWork/items/")
 .controller("defaultCtrl", function ($scope, $http, $resource, baseUrl) {
 
     // текущее педставление
