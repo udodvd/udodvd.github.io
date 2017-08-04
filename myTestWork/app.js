@@ -6,7 +6,7 @@
 
     // получение всех данных из модели
     $scope.refresh = function () {
-        $scope.items = [{ "Vehicle ID": 0, name: "Toyota", Model: "Rav-4", Year: 2016 , Type :"Minivan" }, { "Vehicle ID": 0, name: "Mazda", Model: "6-Sport", Year: 2014 , Type :"Sedan" }, { "Vehicle ID": 0, name: "Ford", Model: "Mustang-GT", Year: 2014 , Type :"Cope" }];
+        $scope.items = [{ VehicleID: 0, name: "Toyota", Model: "Rav-4", Year: 2016 , Type :"Minivan" }, { VehicleID: 0, name: "Mazda", Model: "6-Sport", Year: 2014 , Type :"Sedan" }, { VehicleID: 0, name: "Ford", Model: "Mustang-GT", Year: 2014 , Type :"Cope" }];
     }
 
     // создание нового элемента
