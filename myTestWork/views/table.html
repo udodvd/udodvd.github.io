@@ -3,16 +3,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>VehicleID</th>
+                <th class="text-right">VehicleID</th>
                 <th class="text-right">name</th>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Type</th>
+                <th class="text-right">Model</th>
+                <th class="text-right">Year</th>
+                <th class="text-right">Type</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="item in items">
-                <td>{{$index+1}}</td>
+                <td class="text-right">{{$index+1}}</td>
                 <td class="text-right">{{item.name }}</td>
                 <td class="text-right">{{item.Model }}</td>
                 <td class="text-right">{{item.Year }}</td>
