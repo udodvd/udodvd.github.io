@@ -12,10 +12,12 @@
             { VehicleID: 0, name: "Ford", Model: "Mustang-GT", Year: 2014 , Type :"Cope"} ,
             { VehicleID: 0, name: "Toyota", Model: "Land Cruiser", Year: 2017 , Type :"Jeep" }, 
             { VehicleID: 0, name: "Lexus", Model: "GS-350", Year: 2016 , Type :"Sedan" }, 
-            { VehicleID: 0, name: "Hynday", Model: "GT", Year: 2014 , Type :"Cope" }
+            { VehicleID: 0, name: "Hynday", Model: "GT", Year: 2014 , Type :"Coupe" }
         ];
     }
-
+    // выбор модели по типу
+        $scope.types = [{Type :"Coupe"},{Type :"Sedan"},{Type :"Jeep"},{Type :"Minivan"}];
+    $scope.selected = $scope.types[0];
     // создание нового элемента
     $scope.create = function (item) {
         $scope.items.push(item);

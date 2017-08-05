@@ -14,6 +14,7 @@
     </div>
     <div class="form-group">
         <label>Type:</label>
+        <select ng-options="item.Type for item in types track by item.Type" ng-model="selected"></select>
         <input class="form-control" ng-model="currentItem.Type" />
     </div>
 
