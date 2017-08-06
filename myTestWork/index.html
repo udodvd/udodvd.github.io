@@ -1,19 +1,191 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="exampleApp">
-<head>
-    <title>Items Editor</title>
-    <script src="libs/angular.js"></script>
-    <link href="libs/bootstrap-theme.css" rel="stylesheet" />
-    <link href="libs/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <script src="app.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/34a84ed4e2.js"></script>
+	<title>AngularJs Task</title>
+
 </head>
 
-<body ng-controller="defaultCtrl">
-    <div class="panel panel-primary">
-        <h3 class="panel-heading">Products!</h3>
-        <ng-include src="'views/table.html'" ng-show="currentView == 'table'"></ng-include>
-        <ng-include src="'views/edit.html'" ng-show="currentView == 'edit'"></ng-include>
-    </div>
+<body ng-app="myApp">
+	<div class="container">
+		<div ng-controller="mainCtrl">
+			<div class="header"> 
+				<a class="btn btn-default" ng-click="showPanel('add')">Add car</a>
+				<a class="btn btn-warning" ng-click="showPanel('closeAll')">Close</a>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<table class="table table-bordered table-stripped table-hover">
+						<tr>
+							<th><a href="#" ng-click="sortType = 'vehicle_ID'; sortReverse = !sortReverse">Id  </a>
+								<span ng-show="sortType == 'vehicle_ID' && sortReverse" class="fa fa-caret-up"></span>
+								<span ng-show="sortType == 'vehicle_ID' && !sortReverse" class="fa fa-caret-down"></span>
+							</th>
+							<th>
+								<a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name</a>
+								<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+								<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+							</th>
+							<th>
+								<a href="#" ng-click="sortType = 'model'; sortReverse = !sortReverse">Model</a>
+								<span ng-show="sortType == 'model' && sortReverse" class="fa fa-caret-up"></span>
+								<span ng-show="sortType == 'model' && !sortReverse" class="fa fa-caret-down"></span>
+							</th>
+							<tr ng-repeat="car in carData | orderBy: sortType : sortReverse" ng-click="selectCar(car.vehicle_ID); showPanel('info')">
+								<td>{{car.vehicle_ID}}</td>
+								<td>{{car.name}}</td>
+								<td>{{car.model}}</td>
+							</tr>
+					</table>
+				</div>
+				<div class="col-sm-offset-3 col-md-5 col-md-offset-1" ng-if="editcarshow">
+					<h1>Car id: {{editcar.vehicle_ID ? editcar.vehicle_ID : 'No ID'}} detail</h1>
+					<form class="form-horizontal" novalidate="novalidate">
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-5 col-md-3">
+								<input type="text" class="form-control" ng-model="editcar.name" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Model</label>
+							<div class="col-sm-5 col-md-3">
+								<input type="text" ng-model="editcar.model" class="form-control" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Year</label>
+							<div class="col-sm-5 col-md-3">
+								<input type="number" min="1990" max="2017" ng-model="editcar.Year" class="form-control" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Type</label>
+							<div class="col-sm-5 col-md-3">
+								<select name="" id="" type="text" ng-model="editcar.Type" class="form-control">
+							<option value="Sedan">Sedan</option>
+							<option value="Bus">Bus</option>
+							<option value="Minivan">Minivan</option>
+								
+							</select>
+								<!--								<input type="text" ng-model="editcar.Type" class="form-control" />-->
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="controls col-md-5 col-sm-offset-1">
+								<!--								<a ng-click="cancel()" class="btn btn-default">cancel</a>-->
+								<a ng-click="updateCar()" class="btn btn-small btn-primary">update car</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-sm-offset-3 col-md-5 col-md-offset-1" ng-show="addcarshow">
+					<h1>Add car info</h1>
+						<form class="form-horizontal" novalidate="novalidate">
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Name</label>
+								<div class="col-sm-5 col-md-3">
+									<input type="text" class="form-control" ng-model="newcar.name" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Model</label>
+								<div class="col-sm-5 col-md-3">
+									<input type="text" ng-model="newcar.model" class="form-control" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Year</label>
+								<div class="col-sm-5 col-md-3">
+									<input type="number" min="1990" max="2017" ng-model="newcar.Year" class="form-control" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Type</label>
+								<div class="col-sm-5 col-md-3">
+									<select name="" id="" type="text" ng-model="newcar.Type" class="form-control">
+							<option value="Sedan">Sedan</option>
+							<option value="Bus">Bus</option>
+							<option value="Minivan">Minivan</option>
+								
+							</select>
+									<!--<input type="text" ng-model="newcar.Type" class="form-control" />-->
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="controls col-md-5 col-sm-offset-1">
+									<a ng-click="cancel()" class="btn btn-default">cancel</a>
+									<a ng-click="addCar()" class="btn btn-small btn-primary">add car</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6" ng-show="rightpanelshow">
+						<div>
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" ng-repeat="car in carData">
+									<a href="#{{car.vehicle_ID}}" aria-controls="{{car.vehicle_ID}}" role="tab" data-toggle="tab">{{car.name}}</a>
+								</li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content" id="myTabs">
+								<div role="tabpanel" class="tab-pane" id="{{car.vehicle_ID}}" ng-repeat="car in carData" >
+								
+									<div class="panel panel-default">
+										<div class="panel-heading text-center" >Full car info</div>
+
+										<!-- Table -->
+										<table class="table">
+											<tr>
+												<td>Car Id:</td>
+												<td>{{car.vehicle_ID}}</td>
+											</tr>
+											<tr>
+												<td>Make:</td>
+												<td>{{car.name}}</td>
+											</tr>
+											<tr>
+												<td>Car Model: </td>
+												<td>{{car.model}}</td>
+											</tr>
+											<tr>
+												<td>Year: </td>
+												<td>{{car.Year}}</td>
+											</tr>
+											<tr>
+												<td>Type: </td>
+												<td>{{car.Type}}</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
 </body>
+
 </html>
