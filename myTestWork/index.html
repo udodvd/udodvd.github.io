@@ -19,10 +19,10 @@
 		<div ng-controller="mainCtrl">
 			<div class="header"> 
 				<a class="btn btn-default" ng-click="showPanel('add')">Add car</a>
-				<a class="btn btn-warning" ng-click="showPanel('closeAll')">Close</a>
+				<a class="btn btn-warning closeBtn" ng-click="showPanel('closeAll')">Close</a>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 listCars">
 					<table class="table table-bordered table-stripped table-hover">
 						<tr>
 							<th><a href="#" ng-click="sortType = 'vehicle_ID'; sortReverse = !sortReverse">Id  </a>
@@ -131,7 +131,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-md-6" ng-show="rightpanelshow">
+					<div class="col-md-6 slideTab" >
 						<div>
 
 							<!-- Nav tabs -->

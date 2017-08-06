@@ -123,4 +123,23 @@ app.controller('mainCtrl', ['$scope',
 $(document).ready(function() {
 	$('.nav li:first').tab('show') // Select first tab
 	$('#myTabs .tab-pane:first').addClass('active')
+    //close Tabs animation
+    $('.closeBtn').on('click',function(){
+        console.log($(this).text())
+          if($(this).text() === 'Close'){
+            $(this).text('Show')
+        }else{
+            $(this).text('Close');
+        }
+        $('.slideTab').slideToggle("slow", "swing",function(){
+            console.log($('.listCars').attr('class'))
+            if($('.listCars').hasClass('col-md-6')){
+                $('.listCars').addClass("col-md-12").removeClass("col-md-6");
+            }else{
+                $('.listCars').addClass("col-md-6").removeClass("col-md-12");
+            }
+        
+    });
+        //END Tabs animation
+     });
 });
