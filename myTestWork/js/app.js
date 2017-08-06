@@ -2,7 +2,7 @@ var app = angular.module('myApp', [])
 
 
 app.controller('mainCtrl', ['$scope',
-		function ($scope) {
+		function ($scope){
 
 		$scope.editcar = {}
 		$scope.rightpanelshow = true
