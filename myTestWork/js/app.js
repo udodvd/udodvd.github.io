@@ -1,7 +1,7 @@
 var app = angular.module('myApp', [])
 
 
-app.controller('mainCtrl', 
+app.controller('mainCtrl', ['$scope',
 		function ($scope) {
 
 		$scope.editcar = {}
@@ -118,7 +118,7 @@ app.controller('mainCtrl',
 		$scope.sortType = 'name';
 		$scope.sortReverse = false;
 		$scope.searchFilter = '';
-});
+}]);
 
 $(document).ready(function() {
 	$('.nav li:first').tab('show') // Select first tab
