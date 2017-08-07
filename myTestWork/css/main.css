@@ -7,9 +7,13 @@
 }
 .animation{ 
     opacity: 1;
+    position: relative;
+    top:0px
 }
 .animation.ng-hide{
     opacity: 0;
+    top:150px;
+    position: relative;
 }
 .animation.ng-hide-add, .animation.ng-hide-remove{
    transition: 1s;
