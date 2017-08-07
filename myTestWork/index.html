@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/main.css">
+	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -11,7 +11,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<script src="https://use.fontawesome.com/34a84ed4e2.js"></script>
 	<title>AngularJs Task</title>
-
+	<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+	
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body ng-app="myApp">
@@ -19,10 +26,11 @@
 		<div ng-controller="mainCtrl">
 			<div class="header"> 
 				<a class="btn btn-default" ng-click="showPanel('add')">Add car</a>
-				<a class="btn btn-warning" ng-click="showPanel('closeAll')">Close</a>
+				<a class="btn btn-warning closeAllBtn" ng-click="showPanel('closeAll')">Close</a>
+				<a class="btn btn-warning showAllBtn" ng-click="showPanel('showAll')">Show</a>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 leftDashBoard">
 					<table class="table table-bordered table-stripped table-hover">
 						<tr>
 							<th><a href="#" ng-click="sortType = 'vehicle_ID'; sortReverse = !sortReverse">Id  </a>
@@ -131,7 +139,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-md-6" ng-show="rightpanelshow">
+					<div class="col-md-6 animation" ng-show="rightpanelshow">
 						<div>
 
 							<!-- Nav tabs -->
@@ -181,14 +189,7 @@
 			</div>
 		</div>
 	</div>
-	<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
+	
 </body>
 
 </html>

@@ -1,8 +1,9 @@
-var app = angular.module('myApp', [])
+
+var app = angular.module('myApp', ['ngAnimate'])
 
 
-app.controller('mainCtrl',
-		function ($scope){
+app.controller('mainCtrl', ['$scope',
+		function ($scope) {
 
 		$scope.editcar = {}
 		$scope.rightpanelshow = true
@@ -111,6 +112,11 @@ app.controller('mainCtrl',
 				$scope.rightpanelshow = false
 				$scope.editcarshow = false
 			}
+            if (action ==='showAll'){
+				$scope.addcarshow = false
+				$scope.rightpanelshow = true
+				$scope.editcarshow = false
+			}
 			
 		}
 
@@ -118,26 +124,19 @@ app.controller('mainCtrl',
 		$scope.sortType = 'name';
 		$scope.sortReverse = false;
 		$scope.searchFilter = '';
-});
-
+}]);
 $(document).ready(function() {
 	$('.nav li:first').tab('show') // Select first tab
 	$('#myTabs .tab-pane:first').addClass('active')
-    //close Tabs animation
-    $('.closeBtn').on('click',function(){
-          if($(this).text() === 'Close'){
-              $(this).text('Show')
-            }else{
-            $(this).text('Close');
-            }
-        $('.slideTab').slideToggle("slow", "swing",function(){
-            if($('.listCars').hasClass('col-md-6')){
-                $('.listCars').addClass("col-md-12").removeClass("col-md-6");
-            }else{
-                $('.listCars').addClass("col-md-6").removeClass("col-md-12");
-            }   
-        });
-        //END Tabs animation
-     
-    });
+    //Animation tabs
+
+//    $('.closeAllBtn').on('click',function(){
+//        if($(this).attr('ng-click') === "showPanel('closeAll')"){
+//           $(this).text('Show'); 
+//            $(this).attr('ng-click',"showPanel('showAll')")
+//        }else{
+//            $(this).text('Close');
+//            $(this).attr('ng-click',"showPanel('closeAll')");
+//        }
+//    });
 });
